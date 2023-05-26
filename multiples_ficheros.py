@@ -6,7 +6,7 @@ import sys
 from pyspark import SparkContext
 sc = SparkContext()
 
-# Arista recibe una linea y devuelve la arista en orden alfabético.
+# arista_linea recibe una linea y devuelve la arista en orden alfabético.
 # En caso de que el vértice de entrada y salida sea el mismo no lo guarda.
 def arista_linea(linea):
     vertice = linea.strip().split(',')
