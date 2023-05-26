@@ -1,4 +1,4 @@
-#LUCIA ROLDAN RODRIGUEZ
+
 # Escribe un programa paralelo que calcule los 3-ciclos de un grafo denido como lista de
 # aristas en varios ficheros.
 
