@@ -1,4 +1,4 @@
-#LUCIA ROLDAN RODRIGUEZ
+
 # Escribe un programa paralelo que calcule los 3-ciclos grafos de manera local denidos 
 # como lista de aristas en varios ficheros.
 
@@ -45,7 +45,7 @@ def condicion(tupla):
 def main(sc, ficheros):
     rdd = sc.parallelize([])
     for fichero in ficheros:
-        file_rdd = sc.textFile(fichero).map(lambda a : arista_linea(a,fichero)).\
+        file_rdd = sc.textFile(fichero).map(lambda x : arista_linea(x,fichero)).\
             filter(lambda x: x is not None).distinct()
         rdd = rdd.union(file_rdd).distinct()
     linked = rdd.groupByKey().mapValues(list).flatMap(conexiones)
